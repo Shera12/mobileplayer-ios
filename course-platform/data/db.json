@@ -13,7 +13,7 @@
       "id": 1,
       "title": "My Premium Course",
       "description": "Complete course with videos and PDF notes",
-      "price": 499,
+      "price": 0,
       "thumbnail": "https://via.placeholder.com/300",
       "lectures": [
         {
@@ -25,11 +25,6 @@
           "title": "Lecture 2",
           "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
           "pdf": "https://example.com/pdf2.pdf"
-        },
-        {
-          "title": "Lecture 3",
-          "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          "pdf": "https://example.com/pdf3.pdf"
         }
       ]
     }
