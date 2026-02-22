@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseHub</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body data-razorpay-key="<%= razorpayKey %>">
+    <header class="navbar">
+      <a href="/" class="logo">CourseHub</a>
+      <nav>
+        <a href="/">Home</a>
+        <% if (currentUser) { %>
+          <a href="/dashboard">Dashboard</a>
+          <% if (currentUser.isAdmin) { %><a href="/admin">Admin</a><% } %>
+          <form action="/logout" method="post" class="inline-form">
+            <button type="submit" class="link-btn">Logout</button>
+          </form>
+        <% } else { %>
+          <a href="/login">Login</a>
+          <a href="/signup" class="btn">Get Started</a>
+        <% } %>
+      </nav>
+    </header>
+    <main class="container">

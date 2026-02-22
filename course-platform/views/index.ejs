@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+  <div>
+    <h1>Level up your career with premium online courses</h1>
+    <p>Join thousands of learners, buy once, and access courses from your dashboard forever.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Popular Courses</h2>
+  <div class="grid">
+    <% courses.forEach(course => { %>
+      <article class="card">
+        <img src="<%= course.thumbnail %>" alt="<%= course.title %>" />
+        <div class="card-body">
+          <h3><%= course.title %></h3>
+          <p><%= course.description %></p>
+          <div class="card-footer">
+            <strong>₹<%= course.price %></strong>
+            <% if (currentUser) { %>
+              <button class="btn buy-btn" data-course-id="<%= course.id %>">Buy Now</button>
+            <% } else { %>
+              <a class="btn" href="/login">Login to Buy</a>
+            <% } %>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

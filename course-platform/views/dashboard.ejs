@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<section>
+  <h2>My Learning Dashboard</h2>
+  <% if (!purchasedCourses.length) { %>
+    <p>You haven’t purchased any courses yet. Explore and enroll today.</p>
+  <% } %>
+  <div class="grid">
+    <% purchasedCourses.forEach(course => { %>
+      <article class="card">
+        <img src="<%= course.thumbnail %>" alt="<%= course.title %>" />
+        <div class="card-body">
+          <h3><%= course.title %></h3>
+          <p><%= course.description %></p>
+          <div class="video-wrap">
+            <iframe src="<%= course.videoUrl %>" title="<%= course.title %>" allowfullscreen></iframe>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+</section>
+<%- include('partials/footer') %>
