@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+<section>
+  <h2>Admin Panel</h2>
+  <p>Upload and manage course content.</p>
+  <form class="form" method="post" action="/admin/courses">
+    <input name="title" placeholder="Course title" required />
+    <textarea name="description" placeholder="Course description" required></textarea>
+    <input type="number" name="price" placeholder="Price in INR" required />
+    <input name="thumbnail" placeholder="Thumbnail image URL" required />
+    <input name="videoUrl" placeholder="Video embed URL (e.g. YouTube embed)" required />
+    <button class="btn" type="submit">Add Course</button>
+  </form>
+</section>
+
+<section>
+  <h3>Published Courses</h3>
+  <div class="grid">
+    <% courses.forEach(course => { %>
+      <article class="card">
+        <img src="<%= course.thumbnail %>" alt="<%= course.title %>" />
+        <div class="card-body">
+          <h4><%= course.title %></h4>
+          <p>₹<%= course.price %></p>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+</section>
+<%- include('partials/footer') %>

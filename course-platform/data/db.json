@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@courses.com",
+      "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "isAdmin": true
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Full-Stack JavaScript Mastery",
+      "description": "Learn Node.js, Express, React, and deployment with real-world projects.",
+      "price": 1999,
+      "thumbnail": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=900&q=80",
+      "videoUrl": "https://www.youtube.com/embed/Oe421EPjeBE"
+    },
+    {
+      "id": 2,
+      "title": "UI/UX Design Bootcamp",
+      "description": "Master modern design systems, wireframing, prototyping, and accessibility.",
+      "price": 1499,
+      "thumbnail": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80",
+      "videoUrl": "https://www.youtube.com/embed/c9Wg6Cb_YlU"
+    }
+  ],
+  "purchases": []
+}
