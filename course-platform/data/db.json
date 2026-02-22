@@ -8,38 +8,40 @@
       "isAdmin": true
     }
   ],
-  "courses": ["courses": [
-  {
-    "id": 1,
-    "title": "My Premium Course",
-    "description": "Complete course with videos and pdf notes",
-    "price": 499,
-    "thumbnail": "https://via.placeholder.com/300",
 
-    "lectures": [
-      {
-        "title": "Lecture 1",
-        "video": "https://www.youtube.com/embed/VIDEOID1",
-        "pdf": "https://drive.google.com/file/d/PDFID1/preview"
-      },
-      {
-        "title": "Lecture 2",
-        "video": "https://www.youtube.com/embed/VIDEOID2",
-        "pdf": "https://drive.google.com/file/d/PDFID2/preview"
-      }
-    ]
-  }
-]
+  "courses": [
     {
       "id": 1,
+      "title": "My Premium Course",
+      "description": "Complete course with videos and pdf notes",
+      "price": 499,
+      "thumbnail": "https://via.placeholder.com/300",
+
+      "lectures": [
+        {
+          "title": "Lecture 1",
+          "video": "https://www.youtube.com/embed/VIDEOID1",
+          "pdf": "https://drive.google.com/file/d/PDFID1/preview"
+        },
+        {
+          "title": "Lecture 2",
+          "video": "https://www.youtube.com/embed/VIDEOID2",
+          "pdf": "https://drive.google.com/file/d/PDFID2/preview"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
       "title": "Full-Stack JavaScript Mastery",
       "description": "Learn Node.js, Express, React, and deployment with real-world projects.",
       "price": 1999,
       "thumbnail": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=900&q=80",
       "videoUrl": "https://www.youtube.com/embed/Oe421EPjeBE"
     },
+
     {
-      "id": 2,
+      "id": 3,
       "title": "UI/UX Design Bootcamp",
       "description": "Master modern design systems, wireframing, prototyping, and accessibility.",
       "price": 1499,
@@ -47,5 +49,6 @@
       "videoUrl": "https://www.youtube.com/embed/c9Wg6Cb_YlU"
     }
   ],
+
   "purchases": []
 }
