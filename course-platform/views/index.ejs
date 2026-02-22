@@ -16,14 +16,22 @@
         <div class="card-body">
           <h3><%= course.title %></h3>
           <p><%= course.description %></p>
+          
           <div class="card-footer">
-            <strong>₹<%= course.price %></strong>
-            <% if (currentUser) { %>
-              <button class="btn buy-btn" data-course-id="<%= course.id %>">Buy Now</button>
+            <% if (course.price == 0) { %>
+              <strong>FREE</strong>
             <% } else { %>
-              <a class="btn" href="/login">Login to Buy</a>
+              <strong>₹<%= course.price %></strong>
             <% } %>
+
+            <% if (currentUser) { %>
+              <a class="btn" href="/course-player/<%= course.id %>">Start Course</a>
+            <% } else { %>
+              <a class="btn" href="/login">Login to Start</a>
+            <% } %>
+
           </div>
+
         </div>
       </article>
     <% }) %>
